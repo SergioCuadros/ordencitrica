@@ -20,7 +20,7 @@ const App: React.FC = () => {
       <Aurora />
       <Hero />
       <Container>
-        <h1>Bienvenido a mi SPA con Aurora</h1>
+        <h1>orden</h1>
       </Container>
     </>
   );
