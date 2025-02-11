@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Aurora from './components/AuroraBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Cards from './components/Cards'
 
 const Container = styled.div`
   position: relative;
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <Navbar />
       <Aurora />
       <Hero />
+      <Cards />
       <Container>
         <h1>orden</h1>
       </Container>
