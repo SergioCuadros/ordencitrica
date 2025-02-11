@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import LogoNav from '../assets/logo/ordencitrica_logo_simple.png'
 
 // Estilos del Navbar
+
 const Nav = styled.nav`
-  background: linear-gradient(45deg,rgb(249, 133, 0),rgb(249, 133, 0));
+  background: linear-gradient(45deg,rgb(82, 0, 150),rgb(82, 0, 150));
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -93,12 +95,12 @@ const Navbar: React.FC = () => {
     <Nav>
       {/* Logo con animación */}
       <Logo
-        whileHover="hover"
-        whileTap="tap"
-        variants={logoAnimation}
-      >
-        🎃 Orden Citrica
-      </Logo>
+      whileHover="hover"
+      whileTap="tap"
+      variants={logoAnimation}
+    >
+      <img src={LogoNav} alt="Logo" style={{ width: "220px", height: "150px", marginRight: "10px" }} />
+    </Logo>
 
       {/* Menú Hamburguesa */}
       <Hamburger onClick={toggleMenu}>
