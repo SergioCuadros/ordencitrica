@@ -46,11 +46,18 @@ const hue = (h: number) => `hsl(${h}, 100%, 50%)`
  */
 
 const Container = styled.div`
-    margin: 100px auto;
-    max-width: 500px;
-    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    padding: 50px 20px;
     width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `
+
 
 const CardContainer = styled(motion.div)`
     overflow: hidden;
@@ -98,5 +105,9 @@ const food: [string, number, number][] = [
     ["🍏", 100, 140],
     ["🫐", 205, 245],
     ["🍆", 260, 290],
+    ["🍇", 290, 320],
+    ["🍇", 290, 320],
+    ["🍇", 290, 320],
+    ["🍇", 290, 320],
     ["🍇", 290, 320],
 ]
