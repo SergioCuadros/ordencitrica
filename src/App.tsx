@@ -22,7 +22,7 @@ const App: React.FC = () => {
       <Aurora />
       <Hero />
       <CardsBlue />
-      <Cards />
+      {/* <Cards /> */}
       <Container>
         <h1>orden</h1>
       </Container>

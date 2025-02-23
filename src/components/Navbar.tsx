@@ -8,7 +8,6 @@ import LogoNav from '../assets/logo/ordencitrica_logo_simple.png'
 
 const Nav = styled.nav`
   background: linear-gradient(45deg,rgb(82, 0, 150),rgb(82, 0, 150));
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
