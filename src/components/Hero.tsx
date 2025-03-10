@@ -27,7 +27,7 @@ const HeroContainer = styled.section`
 
 const HeroContent = styled.div`
   max-width: 100%;
-  z-index: 2;
+  z-index: -5;
 
   @media (min-width: 768px) {
     max-width: 50%;
@@ -79,7 +79,7 @@ const HeroIllustration = styled(motion.div)`
   width: 100%;
   height: 100px;
   background: url(${LogoMain}) no-repeat center center/contain;
-  z-index: 1;
+  z-index: -6;
   margin-top: 2rem;
 
   @media (min-width: 768px) {

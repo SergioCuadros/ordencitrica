@@ -13,7 +13,7 @@ background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
 background-size: cover;
 background-repeat: no-repeat;
 
-  z-index: -1;
+  z-index: -6;
 `;
 
 const Aurora: React.FC = () => {

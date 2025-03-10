@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Aurora from './components/AuroraBackground';
 import Navbar from './components/Navbar';
+import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Cards from './components/Cards'
 import CardsBlue from './components/CardsBlue';
@@ -18,14 +19,15 @@ const Container = styled.div`
 const App: React.FC = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Nav />
       <Aurora />
       <Hero />
       <CardsBlue />
       {/* <Cards /> */}
-      <Container>
+      {/* <Container>
         <h1>orden</h1>
-      </Container>
+      </Container> */}
     </>
   );
 };
