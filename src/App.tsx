@@ -1,20 +1,21 @@
 // src/App.tsx
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Aurora from './components/AuroraBackground';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import Cards from './components/Cards'
+// import Cards from './components/Cards'
 import CardsBlue from './components/CardsBlue';
+import ScrollVelocity from './components/ScrollVelocity';
 
-const Container = styled.div`
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: white;
-  text-align: center;
-`;
+// const Container = styled.div`
+//   position: relative;
+//   z-index: 1;
+//   padding: 20px;
+//   color: white;
+//   text-align: center;
+// `;
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,11 @@ const App: React.FC = () => {
       <Nav />
       <Aurora />
       <Hero />
+      <ScrollVelocity
+        texts={['Los Vatos', 'De La Orden']}
+        velocity={100}
+        className="custom-scroll-text"
+      />
       <CardsBlue />
       {/* <Cards /> */}
       {/* <Container>

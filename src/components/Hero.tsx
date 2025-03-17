@@ -3,6 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import  LogoMain  from '../assets/logo/ordencitrica_logo_main.png';
+import ScrollVelocity from './ScrollVelocity';
+  
+
 
 // Estilos del Hero
 const HeroContainer = styled.section`
@@ -145,6 +148,8 @@ const Hero: React.FC = () => {
         variants={illustrationAnimation}
       />
     </HeroContainer>
+
+    
   );
 };
 
