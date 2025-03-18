@@ -114,6 +114,8 @@ const modalVariants: Variants = {
 }
 
 function Modal({ title, text, onClose }: { title: string, text: string, onClose: () => void }) {
+    const [currentPage, setCurrentPage] = useState("info");
+
     return (
         <motion.div
             style={modalOverlay}
@@ -123,15 +125,24 @@ function Modal({ title, text, onClose }: { title: string, text: string, onClose:
             animate="visible"
             exit="exit"
         >
-            <div style={modalContent}>
+            <div style={modalContent} onClick={(e) => e.stopPropagation()}>
+                <nav>
+                    <button onClick={() => setCurrentPage("info")}>Info</button>
+                    <button onClick={() => setCurrentPage("details")}>Detalles</button>
+                    <button onClick={() => setCurrentPage("extra")}>Extra</button>
+                </nav>
+
                 <h2>{title}</h2>
-                <p>{text}</p>
+
+                {currentPage === "info" && <p>{text}</p>}
+                {currentPage === "details" && <p>Detalles adicionales sobre el tema...</p>}
+                {currentPage === "extra" && <p>Más información aquí...</p>}
+
                 <button style={closeButton} onClick={onClose}>Cerrar</button>
             </div>
         </motion.div>
-    )
+    );
 }
-
 const cardVariants: Variants = {
     offscreen: {
         y: 300,
@@ -153,6 +164,10 @@ const hue = (h: number) => `hsl(${h}, 100%, 50%)`
  * ==============   Styles   ================
  */
 
+
+const buttonItem : React.CSSProperties = {
+    
+}
 const container: React.CSSProperties = {
     margin: "100px auto",
     maxWidth: "100%", 
@@ -204,7 +219,7 @@ const modalOverlay: React.CSSProperties = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "black",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -232,7 +247,7 @@ const closeButton: React.CSSProperties = {
  * ==============   Data   ================
  */
 
-const Bluesonyan: [string, number, number, string, string][] = [
+const Bluesonyan: [string, number, number, string, string,][] = [
     [Fear, 340, 10, 'Fear', 'Este es el texto para Fear.'],
     [Firu, 60, 100, 'Firu', 'Este es el texto para Firu.'],
     [Ilar, 260, 280, 'Ilar', 'Este es el texto para Ilar.'],

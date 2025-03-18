@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import  LogoMain  from '../assets/logo/ordencitrica_logo_main.png';
-import ScrollVelocity from './ScrollVelocity';
+
   
 
 
